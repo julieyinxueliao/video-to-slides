@@ -14,7 +14,6 @@ Paste a YouTube URL. Get a polished HTML presentation where:
 - **Left panel** — the YouTube video plays in-page
 - **Right panel** — slides auto-advance in sync as the video plays
 - **Click any slide** — the video jumps to that exact moment
-- **Every slide** — has a timestamp link back to the source clip
 
 The output is a single self-contained `.html` file you can open in any browser, share with a link, or host anywhere.
 
@@ -31,7 +30,6 @@ The output is a single self-contained `.html` file you can open in any browser, 
 | ⏱ **Auto-advance** | Slides advance automatically as the video plays through sections |
 | 🔁 **Reverse seek** | Click any slide to jump the video to that moment |
 | 📋 **Table of contents** | Second slide lists every section with clickable jump links |
-| 🔗 **Timestamp links** | Each slide has a `▶ M:SS in video` link for direct access |
 | 🎨 **10 smart layouts** | Lists, quotes, two-column, stats, grid cards, tables, framework diagrams, CSS pie/bar charts |
 | 📊 **CSS-only charts** | Pie (conic-gradient) and bar charts — no chart library needed |
 | 🌐 **Multi-language** | Slides match the video's language automatically |
@@ -53,12 +51,6 @@ The output is a single self-contained `.html` file you can open in any browser, 
    ```
    Install this skill: /path/to/youtube-to-slides.skill
    ```
-
-### In Claude Cowork (desktop app)
-
-1. Download `youtube-to-slides.skill` from [Releases](../../releases)
-2. Open Cowork, click the skill file card
-3. Press **"Copy to your skills"**
 
 ### Manual install (Claude Code)
 
