@@ -1,0 +1,65 @@
+{
+  "skill_name": "youtube-to-slides",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我把这个TED演讲做成slides，让我可以快速了解核心内容：https://www.youtube.com/watch?v=iG9CE55wbtY",
+      "expected_output": "A beautiful HTML slide deck summarizing Ken Robinson's 'Do schools kill creativity?' TED Talk. Should include cover slide with video info, overview of topics, 6-10 content slides capturing key arguments, and a takeaways slide. Language should be Chinese since the user wrote in Chinese. Slides should use Reveal.js and be self-contained.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "html_file_created",
+          "description": "An HTML file was saved to the outputs directory"
+        },
+        {
+          "name": "uses_revealjs",
+          "description": "The HTML file uses Reveal.js from CDN for slide functionality"
+        },
+        {
+          "name": "has_cover_slide",
+          "description": "First slide contains the video title and channel information"
+        },
+        {
+          "name": "has_multiple_content_slides",
+          "description": "There are at least 5 content slides covering different sections of the talk"
+        },
+        {
+          "name": "has_takeaways_slide",
+          "description": "There is a final slide summarizing key takeaways"
+        },
+        {
+          "name": "content_is_accurate",
+          "description": "The content reflects the actual themes of Ken Robinson's talk (creativity, education system, divergent thinking)"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I watched this video but it's too long. Can you make a slide deck summarizing the key points so I can share it with my team? https://www.youtube.com/watch?v=qp0HIF3SfI4",
+      "expected_output": "A beautiful HTML slide deck in English summarizing Simon Sinek's 'How great leaders inspire action' TED Talk. Should clearly present the Golden Circle concept (Why/How/What), include key examples (Apple, Wright Brothers), and be suitable for sharing with a team.",
+      "files": [],
+      "assertions": [
+        {
+          "name": "html_file_created",
+          "description": "An HTML file was saved to the outputs directory"
+        },
+        {
+          "name": "language_is_english",
+          "description": "Slide content is written in English to match the user's request language"
+        },
+        {
+          "name": "golden_circle_covered",
+          "description": "The slides cover the Golden Circle concept (Why/How/What)"
+        },
+        {
+          "name": "has_at_least_6_slides",
+          "description": "The presentation has at least 6 slides total"
+        },
+        {
+          "name": "professional_design",
+          "description": "The HTML uses proper Reveal.js theming and custom CSS for visual hierarchy"
+        }
+      ]
+    }
+  ]
+}

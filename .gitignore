@@ -1,0 +1,35 @@
+# ── Generated output ──────────────────────────────────────────
+# Slide decks are generated artifacts, not source files
+outputs/
+*.html
+
+# ── Build artifacts ───────────────────────────────────────────
+*.skill          # packaged skill zip — build from source instead
+dist/
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+.env
+
+# ── macOS ─────────────────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# ── Editors ───────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ──────────────────────────────────────────────────────
+*.log
