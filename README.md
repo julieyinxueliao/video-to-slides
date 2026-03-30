@@ -17,8 +17,7 @@ Paste a YouTube URL. Get a polished HTML presentation where:
 
 The output is a single self-contained `.html` file you can open in any browser, share with a link, or host anywhere.
 
-![Demo screenshot](assets/demo.png)
-<!-- Replace with an actual screenshot or GIF once you have one -->
+<img width="2518" height="928" alt="Screenshot 2026-03-29 at 3 47 15 PM" src="https://github.com/user-attachments/assets/ad1b5708-24bc-4b17-a002-a064bf7ac3da" />
 
 ---
 
@@ -40,25 +39,22 @@ The output is a single self-contained `.html` file you can open in any browser, 
 
 ## Installation
 
-### In Claude Code
+**Option 1 — Clone the full repo (recommended)**
 
-1. Download `youtube-to-slides.skill` from [Releases](../../releases)
-2. In your terminal, run:
-   ```
-   claude
-   ```
-3. In the Claude Code chat, say:
-   ```
-   Install this skill: /path/to/youtube-to-slides.skill
-   ```
-
-### Manual install (Claude Code)
-
-Clone this repo into your Claude skills directory:
-
+Open Terminal and run:
 ```bash
-git clone https://github.com/YOUR_USERNAME/youtube-to-slides ~/.claude/skills/youtube-to-slides
+git clone https://github.com/julieyinxueliao/video-to-slides ~/.claude/skills/youtube-to-slides
 ```
+
+This downloads all the skill files directly into the folder where Claude Code looks for skills. You only need to do this once.
+
+**Option 2 — Manual install**
+
+1. Download this repo as a ZIP (click the green **"Code"** button on this page → **"Download ZIP"**)
+2. Unzip it
+3. Copy the `SKILL.md` file into `~/.claude/skills/youtube-to-slides/` on your computer
+
+After either option, restart Claude Code and the skill will be available.
 
 ---
 
