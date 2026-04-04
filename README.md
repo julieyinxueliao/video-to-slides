@@ -77,9 +77,26 @@ Summarize this video for my team: https://youtu.be/qp0HIF3SfI4
 Claude will:
 1. Fetch the transcript (auto-installs `youtube-transcript-api` if needed)
 2. Analyze the content and plan a slide structure
-3. Generate a single `.html` file in your output folder
+3. Generate two files in your working directory: a `.html` slide deck and an `open-slides.command` launcher
 
 > **Note:** Transcript extraction requires internet access to YouTube. Works best in Claude Code on your local machine. Claude Cowork's VM may have network restrictions that block YouTube.
+
+---
+
+## ⚠️ Opening your slides — use the launcher, not the HTML file directly
+
+**Do not double-click the `.html` file to open it.** YouTube's embed player blocks pages served from the local filesystem (`file://`), which causes a **"Error 153 — Video player configuration error"** and the video won't load.
+
+**Instead, use the `open-slides.command` launcher** that is generated alongside the HTML file:
+
+1. In Finder, locate `open-slides.command` in the same folder as your `.html` file
+2. Double-click `open-slides.command`
+3. If macOS asks *"Are you sure you want to open this?"*, click **Open**
+4. A Terminal window will open, start a local server, and automatically launch the slides in your browser
+
+The launcher starts a local HTTP server (`http://localhost:8080`) which satisfies YouTube's embedding requirements. The video, sync, and all interactive features will work correctly.
+
+> **To stop the server**, close the Terminal window that opened when you launched the slides.
 
 ---
 
@@ -157,6 +174,7 @@ Reveal.on('slidechanged') → player.seekTo(startSec)
 ```
 youtube-to-slides/
 ├── SKILL.md                  # Claude skill instructions (the "brain")
+├── open-slides.command       # Double-clickable launcher — always use this to open slides
 ├── scripts/
 │   └── fetch_transcript.py   # Transcript + metadata fetcher
 ├── evals/
